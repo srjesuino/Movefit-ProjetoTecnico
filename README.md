@@ -35,7 +35,6 @@ movefit/
 - **Back-end:** PHP (sem frameworks)
 - **Front-end:** HTML, CSS, JavaScript puro
 - **Banco de dados:** MySQL (via XAMPP)
-- **Outros:** AJAX para inserção dinâmica de depoimentos
 
 ---
 
