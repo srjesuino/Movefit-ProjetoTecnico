@@ -187,7 +187,7 @@ body {
     margin-bottom: 20px;
     width: 280px !important;
     height: 220px !important;
-    align-content: center;
+    align-content: flex-start;
 }
 
 /* Título de cada depoimento */
