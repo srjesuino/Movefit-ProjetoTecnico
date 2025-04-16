@@ -18,8 +18,9 @@ foreach ($depoimentos as $depoimento) {
     echo '<div class="swiper-slide depoimento-item">';
     // Exibe o nome do autor do depoimento, escapando caracteres especiais para evitar XSS
     echo '<h3>' . htmlspecialchars($depoimento['nome']) . '</h3>';    
-    // Exibe a nota do depoimento, escapando caracteres especiais
-    echo '<span>Nota: ' . htmlspecialchars($depoimento['nota']) . '</span>';
+    // Exibe a nota do depoimento, representada por estrelas
+    // A nota é convertida para um inteiro e repetida o número de vezes correspondente
+    echo "<td>" . str_repeat("⭐", (int)$depoimento['nota']) . "</td>";
     // Exibe o comentário do depoimento, escapando caracteres especiais
     echo '<p>' . htmlspecialchars($depoimento['comentario']) . '</p>';
     echo '</div>';
