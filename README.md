@@ -11,7 +11,7 @@ movefit/
 ├── admin/                # Painel administrativo
 │   ├── excluir.php       # Excluir depoimento
 │   ├── index.php         # Interface do painel admin
-│   └── inserir.php       # Inserir/editar depoimentos (via AJAX)
+│   └── inserir.php       # Inserir/editar depoimentos 
 ├── assets/               # Arquivos estáticos
 │   ├── css/              # Estilos (landing page e admin)
 │   ├── js/               # Scripts (landing page e admin)
@@ -19,7 +19,7 @@ movefit/
 │   └── icons/            # Ícones decorativos
 ├── inc/                  # Scripts auxiliares
 │   ├── conn.php          # Conexão com banco de dados
-│   └── depoimentos.php   # Consulta de depoimentos (JSON)
+│   └── depoimentos.php   # Consulta de depoimentos
 └── public/               # Landing Page principal
     ├── index.php         # Página inicial montada por includes
     └── inc/
@@ -86,30 +86,10 @@ http://localhost/movefit/admin/index.php        # Painel Administrativo
 
 ## ✅ Diferenciais
 
-- Uso de AJAX para envio de formulário sem recarregar a página
 - Modularização dos arquivos PHP simulando componentização
+- Uso de varias formas de CRUD no projeto
 - Separacão clara entre lógica, estilo e conteúdo
 
 ---
 
-## ✨ Melhorias Futuras
-
-- Tela de login protegendo o painel administrativo
-- Validação mais robusta dos formulários
-- Feedback visual com toasts (ex: Bootstrap ou bibliotecas JS)
-- Paginação dos depoimentos
-
----
-
-## ✉ Contato
-
-Para mais informações sobre o projeto ou sobre mim:
-
-- **Nome:** [Seu Nome Aqui]
-- **Email:** [seu.email@exemplo.com]
-- **LinkedIn:** [linkedin.com/in/seu-perfil](https://linkedin.com/in/seu-perfil)
-
----
-
-Agradeço a oportunidade e me coloco à disposição para conversar mais sobre o projeto!
 
