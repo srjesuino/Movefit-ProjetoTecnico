@@ -1,0 +1,10 @@
+/* Estilo para o rodapé da pagina */
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
+}

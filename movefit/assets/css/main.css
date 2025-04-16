@@ -1,0 +1,306 @@
+/*
+    main.css
+    Este arquivo contém os estilos CSS para a página inicial do site.
+    Ele define a aparência de várias seções, incluindo a seção de boas-vindas, benefícios, depoimentos e galeria.
+    Os estilos são responsivos, adaptando-se a diferentes tamanhos de tela.
+    
+    As classes são organizadas para facilitar a leitura e manutenção do código.
+    O uso de gradientes, flexbox e grid layout proporciona uma interface moderna e atraente.
+*/
+
+/* Estilo geral do corpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #080F17;
+}
+
+/* Configuração para evitar overflow horizontal */
+.main-content {
+    overflow-x: hidden;
+}
+
+/* Estilo da seção de boas-vindas */
+.main-welcome {
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: linear-gradient(0deg, #243324, #080F17);
+    background-size: auto 75%;
+    background-repeat: no-repeat;
+}
+
+/* Texto principal da seção de boas-vindas */
+.main-welcome-text {
+    color: #fff;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Título da seção de boas-vindas */
+.main-welcome-text h1 {
+    font-size: 3.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Parágrafo da seção de boas-vindas */
+.main-welcome-text p {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* Botões da seção de boas-vindas */
+.main-welcome-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+/* Estilo do botão "teste" */
+.btn-teste {
+    background-color: #AEF249;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* Estilo do botão "fale" */
+.btn-fale {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* Efeito hover no botão "fale" */
+.btn-fale:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s;
+}
+
+/* Efeito hover no botão "teste" */
+.btn-teste:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* Imagem da seção de boas-vindas */
+.main-welcome-img img {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Estilo da seção de benefícios */
+.main-beneficios {
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* Título da seção de benefícios */
+.main-beneficios h3 {
+    margin-left: 5px;
+    margin-bottom: 24px;
+}
+
+/* Grid para os itens de benefícios */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+}
+
+/* Estilo de cada item de benefício */
+.beneficio-item {
+    border-radius: 22px;
+    background: #121820;
+    border-top: 1px solid #FFFFFF29;
+    padding: 24px;
+}
+
+/* Título de cada item de benefício */
+.beneficio-item h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 10px;
+}
+
+/* Estilo da seção de depoimentos */
+.main-depoimentos {
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    overflow-x: hidden;
+}
+
+/* Wrapper para o efeito de fade no swiper */
+.swiper-fade-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradiente no lado direito do swiper */
+.swiper-fade-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to left, #080F17 5%, transparent);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Gradiente no lado esquerdo do swiper */
+.swiper-fade-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, #080F17 5%, transparent);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Estilo de cada item de depoimento */
+.depoimento-item {
+    border-radius: 22px;
+    background: #121820;
+    border: 1px solid #FFFFFF29;
+    padding: 24px;
+    margin-bottom: 20px;
+    width: 280px !important;
+    height: 220px !important;
+    align-content: center;
+}
+
+/* Título de cada depoimento */
+.depoimento-item h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Texto de cada depoimento */
+.depoimento-item p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+/* Estilo da seção de galeria */
+.main-galeria {
+    width: 100%;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* Flexbox para os itens da galeria */
+.flex-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Linha de itens da galeria */
+.galeria-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo das imagens da galeria */
+.galeria-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Divisor de seções */
+.divider {
+    width: 100%;
+    height: 1px;
+    border: 1px solid #FFFFFF29;
+    margin: 40px 0 100px 0;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    /* Ajuste do título na seção de boas-vindas */
+    .main-welcome-text h1 {
+        font-size: 2.5em;
+    }
+
+    /* Ajuste do parágrafo na seção de boas-vindas */
+    .main-welcome-text p {
+        font-size: 1.2em;
+    }
+
+    /* Botões em coluna na seção de boas-vindas */
+    .main-welcome-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Centralização dos botões */
+    .btn-teste,
+    .btn-fale {
+        text-align: center;
+    }
+
+    /* Ajuste do grid de benefícios */
+    .beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+
+    /* Ajuste do padding nos itens de benefícios */
+    .beneficio-item {
+        padding: 16px;
+        text-align: center;
+    }
+
+    /* Ajuste da largura dos depoimentos */
+    .depoimento-item {
+        width: 100%;
+    }
+
+    /* Ajuste do gradiente no swiper */
+    .swiper-fade-wrapper::after {
+        background: linear-gradient(to left, #080F17 2%, transparent);
+    }
+
+    /* Remoção do gradiente esquerdo no swiper */
+    .swiper-fade-wrapper::before {
+        display: none;
+    }
+
+    /* Itens da galeria em coluna */
+    .galeria-row {
+        flex-direction: column;
+    }
+}
