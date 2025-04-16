@@ -1,119 +1,115 @@
+# MoveFit - Projeto Full Stack Jr
 
-# MoveFit - Desafio Técnico Full Stack Jr 2
-
-Projeto desenvolvido para o processo seletivo da vaga de Desenvolvedor Web Full Stack Jr 2. O sistema consiste em uma landing page institucional da empresa fictícia "MoveFit", com um painel administrativo para gerenciar depoimentos de usuários.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- PHP (sem frameworks)
-- HTML5 / CSS3
-- JavaScript (puro)
-- MySQL (via XAMPP)
-- Bootstrap (somente para alguns componentes visuais)
+Este projeto foi desenvolvido como parte de um desafio técnico para uma vaga de Desenvolvedor Full Stack Jr 2. Ele simula um site institucional com uma landing page responsiva e um painel administrativo para cadastro e gestão de depoimentos de clientes.
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📂 Estrutura do Projeto
 
 ```
-/movefit
-│
-├── index.php                  # Página principal (Landing Page)
-├── inc/
-│   ├── conn.php               # Conexão com o banco de dados
-│   ├── header.php             # Cabeçalho comum
-│   ├── footer.php             # Rodapé comum
-│   └── mensagens.php          # Mensagens de alerta (sessões)
-├── blocos/                    # Blocos da landing page (modularizados)
-│   ├── sobre.php
-│   ├── beneficios.php
-│   ├── planos.php
-│   ├── depoimentos.php
-│   └── contato.php
-├── admin/
-│   ├── index.php              # Painel administrativo
-│   ├── inserir.php            # Inserção de novos depoimentos
-│   ├── excluir.php            # Exclusão de depoimentos
-│   └── editar.php             # Edição de depoimentos
-├── assets/
-│   ├── css/
-│   │   └── style.css          # Estilo geral
-│   │   └── admin.css          # Estilo do painel admin
-│   └── js/
-│       └── scripts.js         # JS principal
-└── bd/
-    └── movefit.sql            # Dump do banco de dados
+movefit/
+├── admin/                # Painel administrativo
+│   ├── excluir.php       # Excluir depoimento
+│   ├── index.php         # Interface do painel admin
+│   └── inserir.php       # Inserir/editar depoimentos (via AJAX)
+├── assets/               # Arquivos estáticos
+│   ├── css/              # Estilos (landing page e admin)
+│   ├── js/               # Scripts (landing page e admin)
+│   ├── img/              # Imagens usadas na landing page
+│   └── icons/            # Ícones decorativos
+├── inc/                  # Scripts auxiliares
+│   ├── conn.php          # Conexão com banco de dados
+│   └── depoimentos.php   # Consulta de depoimentos (JSON)
+└── public/               # Landing Page principal
+    ├── index.php         # Página inicial montada por includes
+    └── inc/
+        ├── header.php    # Bloco: cabeçalho
+        ├── main.php      # Bloco: conteúdo principal
+        └── footer.php    # Bloco: rodapé
 ```
 
 ---
 
-## ⚙️ Como Rodar o Projeto
+## 🌐 Tecnologias Utilizadas
 
-1. Clone ou extraia o repositório na pasta `htdocs` do seu XAMPP:
-   ```
-   C:\xampp\htdocs\movefit
-   ```
-
-2. Inicie o XAMPP e ative o **Apache** e o **MySQL**.
-
-3. Acesse o **phpMyAdmin** (http://localhost/phpmyadmin) e:
-
-   - Crie um banco de dados com o nome `movefit`
-   - Importe o arquivo `bd/movefit.sql`
-
-4. Acesse o sistema via navegador:
-   ```
-   http://localhost/movefit/index.php
-   ```
-
-5. Para o painel administrativo:
-   ```
-   http://localhost/movefit/admin/index.php
-   ```
+- **Back-end:** PHP (sem frameworks)
+- **Front-end:** HTML, CSS, JavaScript puro
+- **Banco de dados:** MySQL (via XAMPP)
+- **Outros:** AJAX para inserção dinâmica de depoimentos
 
 ---
 
-## 🔐 Acesso ao Painel Administrativo
+## 🔧 Como Executar o Projeto
 
-Atualmente, **não há autenticação** implementada. Qualquer pessoa com o link pode acessar.  
-Há planejamento para inclusão de login (como extra opcional).
+1. **Clone ou extraia o repositório** no diretório `htdocs` do seu XAMPP:
 
----
+```bash
+movefit/
+```
 
-## 📌 Funcionalidades Implementadas
+2. **Importe o banco de dados**
 
-### Landing Page:
-- Layout institucional fictício
-- Seções: Sobre, Benefícios, Planos, Depoimentos, Contato
-- Exibição de depoimentos do banco em tempo real
+Crie o banco com o nome `movefit` no phpMyAdmin e execute o script abaixo:
 
-### Painel Administrativo:
-- Cadastro de novos depoimentos
-- Listagem em tabela
-- Edição e exclusão de depoimentos
-- Alerta visual de sucesso ou falha nas ações
+```sql
+CREATE TABLE depoimentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    comentario TEXT NOT NULL,
+    nota INT NOT NULL
+);
+```
 
----
+3. **Configure o XAMPP e acesse no navegador:**
 
-## 🧠 Considerações Técnicas
-
-- O projeto é **inteiramente feito sem frameworks**, com o objetivo de demonstrar domínio de base.
-- Utilizei `includes` para simular componentização da landing page (como o React).
-- O painel administrativo funciona com requisições AJAX simples e sessões para mensagens.
-
----
-
-## 💡 Extras planejados
-
-- Tela de login protegendo o `/admin`
-- Melhoria visual com Bootstrap Icons
-- Animações leves com JavaScript
+```
+http://localhost/movefit/public/index.php       # Landing Page
+http://localhost/movefit/admin/index.php        # Painel Administrativo
+```
 
 ---
 
-## 📞 Contato
+## 📄 Funcionalidades
 
-Desenvolvido por [Seu Nome]  
-[LinkedIn] | [GitHub] | [Email se quiser colocar]
+### Landing Page
+- Responsiva
+- Dividida em componentes (header, main, footer)
+- Design simples e coerente
+
+### Painel Administrativo
+- Formulário para cadastro de depoimentos
+- Listagem de depoimentos em tempo real
+- Ações de **editar** e **excluir**
+- Interface leve e funcional
+
+---
+
+## ✅ Diferenciais
+
+- Uso de AJAX para envio de formulário sem recarregar a página
+- Modularização dos arquivos PHP simulando componentização
+- Separacão clara entre lógica, estilo e conteúdo
+
+---
+
+## ✨ Melhorias Futuras
+
+- Tela de login protegendo o painel administrativo
+- Validação mais robusta dos formulários
+- Feedback visual com toasts (ex: Bootstrap ou bibliotecas JS)
+- Paginação dos depoimentos
+
+---
+
+## ✉ Contato
+
+Para mais informações sobre o projeto ou sobre mim:
+
+- **Nome:** [Seu Nome Aqui]
+- **Email:** [seu.email@exemplo.com]
+- **LinkedIn:** [linkedin.com/in/seu-perfil](https://linkedin.com/in/seu-perfil)
+
+---
+
+Agradeço a oportunidade e me coloco à disposição para conversar mais sobre o projeto!
+
