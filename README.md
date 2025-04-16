@@ -49,16 +49,8 @@ movefit/
 
 2. **Importe o banco de dados**
 
-Crie o banco com o nome `movefit` no phpMyAdmin e execute o script abaixo:
+Crie o banco com o nome `movefit` no phpMyAdmin e execute a importação do arquivo movefit.sql que esta no repositorio:
 
-```sql
-CREATE TABLE depoimentos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    comentario TEXT NOT NULL,
-    nota INT NOT NULL
-);
-```
 
 3. **Configure o XAMPP e acesse no navegador:**
 
@@ -78,7 +70,7 @@ http://localhost/movefit/admin/index.php        # Painel Administrativo
 
 ### Painel Administrativo
 - Formulário para cadastro de depoimentos
-- Listagem de depoimentos em tempo real
+- Listagem de depoimentos
 - Ações de **editar** e **excluir**
 - Interface leve e funcional
 
@@ -92,4 +84,6 @@ http://localhost/movefit/admin/index.php        # Painel Administrativo
 
 ---
 
+Qualquer duvida entrar em contato:
+email:  jesuinodeoliveira97@gmail.com
 
