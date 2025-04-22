@@ -3,7 +3,7 @@
 $host = "localhost"; // Endereço do servidor do banco de dados
 $dbname = "movefit"; // Nome do banco de dados
 $user = "root"; // Usuário do banco de dados
-$pass = "3[WjEFb2GSOKaned"; // Senha do banco de dados
+$pass = ""; // Senha do banco de dados
 
 try {
     // Criação de uma nova conexão PDO com o banco de dados
