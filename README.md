@@ -51,7 +51,12 @@ movefit/
 Crie o banco com o nome `movefit` no phpMyAdmin e execute a importação do arquivo movefit.sql que esta no repositorio:
 
 
-3. **Configure o XAMPP e acesse no navegador:**
+3. **No arquivo. inc/conn.php**
+
+Você pode editar a constante "senha" conforme seu ambiente, ou deixar o padrão caso seja o ambiente xammp virgem, para a conexão correta ao banco de dados.
+
+
+4. **Configure o XAMPP e acesse no navegador:**
 
 ```
 http://localhost/movefit/public/index.php       # Landing Page
